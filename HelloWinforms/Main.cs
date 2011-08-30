@@ -6,23 +6,23 @@ namespace HelloWinforms
 {
 	class HelloWorld : Form
 	{
-		public static void Main (string[] args)
+		public static void Main(string[] args)
 		{
-			Console.WriteLine ("Hello World!");
-			Application.Run (new HelloWorld ());
+			Console.WriteLine("Hello World!");
+			Application.Run(new HelloWorld ());
 		}
 
-		public HelloWorld ()
+		public HelloWorld()
 		{
-			Button b = new Button ();
+			var b = new Button();
 			b.Text = "Click Me!";
 			b.Click += new EventHandler (Button_Click);
 			Controls.Add (b);
 		}
 	 
-		private void Button_Click (object sender, EventArgs e)
+		private void Button_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show ("Button Clicked!");
+			MessageBox.Show("Button Clicked!");
 		}		
 			
 	}
